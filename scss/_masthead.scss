@@ -1,32 +1,50 @@
 // Styling for the masthead
 header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - #{$navbar-height});
-  // replace the masthead.jpg image in the /img directory to change the image
-  // if the image name change, make sure to update the url path below!
-  background: linear-gradient(to bottom, #{fade-out($brown, .2)} 0%,#{fade-out($brown, .2)} 100%), url('../img/bg-masthead.jpg');
-  background-position: center;
+  text-align: center;
+  color: white;
+  background-image: url('../img/header-bg.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
+  background-position: center center;
   background-size: cover;
-  h1 {
-    font-size: 2.25rem;
-  }
-  @include media-breakpoint-up(lg) {
-    height: 100vh;
-    min-height: 40rem;
-    padding-top: $navbar-height;
-    padding-bottom: 0;
-    p {
-      font-size: 1.15rem;
+  .intro-text {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    .intro-lead-in {
+      font-size: 22px;
+      font-style: italic;
+      line-height: 22px;
+      margin-bottom: 25px;
+      @include serif-font;
     }
-    h1 {
-      font-size: 3rem;
+    .intro-heading {
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 50px;
+      margin-bottom: 25px;
+      @include heading-font;
     }
   }
-  @include media-breakpoint-up(xl) {
-    h1 {
-      font-size: 3.5rem;
+}
+@media(min-width:768px) {
+  header.masthead {
+    .intro-text {
+      padding-top: 300px;
+      padding-bottom: 200px;
+      .intro-lead-in {
+        font-size: 40px;
+        font-style: italic;
+        line-height: 40px;
+        margin-bottom: 25px;
+        @include serif-font;
+      }
+      .intro-heading {
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+        margin-bottom: 50px;
+        @include heading-font;
+      }
     }
   }
 }
