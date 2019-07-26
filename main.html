@@ -72,9 +72,9 @@
 								Every Moment		
 							</h1>
 							<p class="pt-10 pb-10 text-white">
-								Your home for health
+								
 Booking doctor appointments has never been so easy.
-Join us and make QKDoc a true companion.
+Join us and make a true companion.
 							</p>
 							
 						</div>										
@@ -108,25 +108,25 @@ Join us and make QKDoc a true companion.
 							</ul>
 						</div>
 						<div class="col-lg-6 col-md-6 appointment-right pt-60 pb-60">
-							<form class="form-wrap" action="#">
+							<form class="form-wrap" method="post" action="send_mail.php">
 								<h3 class="pb-20 text-center mb-30">Book an Appointment</h3>		
 								<input type="text" class="form-control" name="name" placeholder="Patient Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient Name'" >
 								<input type="text" class="form-control" name="phone" placeholder="Phone " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'" >
 								<input type="email" class="form-control" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" >
 								<input id="datepicker1" name="dop" class="dates form-control"  placeholder="Date of Birth" type="text">   
-								<div class="form-select" id="service-select">
+								<div class="form-select" id="service-select" name="spec">
 									<select>
 										<option data-display="">specialization</option>
 										<option value="1">Dentist</option>
 										<option value="2">Gynecologist</option>
 										<option value="3">General Physician</option>
 										<option value="4">Dermatoligist</option>
-										<option value="4">ENT Specialist</option>
-										<option value="4">Homoeopathy</option>
-										<option value="4">Ayurveda</option>
+										<option value="5">ENT Specialist</option>
+										<option value="6">Homoeopathy</option>
+										<option value="7">Ayurveda</option>
 									</select>
 								</div>
-									<div class="form-select" id="service-select">
+									<div class="form-select" id="service-select" name="doc">
 									<select>
 										<option data-display="">Doctors</option>
 										<option value="1">Dr. Gopal Singh Dhanik</option>
@@ -144,8 +144,9 @@ Join us and make QKDoc a true companion.
 										<option value="13">Dr. Ashish Agrawal</option>
 									</select>
 								</div>	
-								<input id="datepicker2" class="dates form-control"  placeholder="appointment Date" type="text">  
-								<textarea name="messege" class="" rows="5" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea> 
+								<input id="datepicker2" class="dates form-control" name="date" placeholder="appointment Date" type="text">  
+								<textarea name="messege" class="" rows="5" placeholder="message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea> 
+								<input type="submit" value="Send Email">
 								<button class="primary-btn text-uppercase">Confirm Booking</button>
 							</form>
 						</div>
